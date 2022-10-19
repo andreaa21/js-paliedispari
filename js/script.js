@@ -45,6 +45,7 @@ Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto.*/
 
 const userInput = prompt('scegli pari o dispari');
+console.log('il giocatore ha scelto:', userInput);
 const userNumber = parseInt(prompt('scegli un numero da 1 a 5'));
 console.log(userNumber);
 let cpuNumber = getRandomNumber(1 , 5);
