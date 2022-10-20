@@ -4,12 +4,12 @@ Creare una funzione per capire se la parola inserita è palindroma*/
 
 
 
-// const parolaInserita = prompt('Inserisci una parola');
-// let secondaParola = (invertiParola(parolaInserita));
+// const parolaInserita = prompt('Inserisci una parola').trim();
+// let secondaParola = invertiParola(parolaInserita);
 // console.log(secondaParola);
 
 
-// if (parolaInserita === secondaParola){
+// if (parolaInserita.toLowerCase() === secondaParola.toLocaleLowerCase()){
 //     console.log('la parola inserita è un palindromo');
 // }else{
 //     console.log('la parola inserita non è un palindromo');
@@ -18,11 +18,11 @@ Creare una funzione per capire se la parola inserita è palindroma*/
 
 
 
-// function invertiParola (parolaInserita){
+// function invertiParola (parola){
 //     let parolaInversa = "";
 
-//     for(let i = parolaInserita.length -1; i >= 0; i--){
-//         parolaInversa += parolaInserita[i];
+//     for(let i = parola.length -1; i >= 0; i--){
+//         parolaInversa += parola[i];
 //     }
 //     return parolaInversa;
 // }
@@ -47,9 +47,9 @@ Dichiariamo chi ha vinto.*/
 const userInput = prompt('scegli pari o dispari');
 console.log('il giocatore ha scelto:', userInput);
 const userNumber = parseInt(prompt('scegli un numero da 1 a 5'));
-console.log(userNumber);
+console.log('numero giocatore:', userNumber);
 let cpuNumber = getRandomNumber(1 , 5);
-console.log(cpuNumber);
+console.log('numero computer: ', cpuNumber);
 let sum = userNumber + cpuNumber;
 console.log('la somma dei numeri è:', sum);
 let sumOutput = checkSomma(sum);
@@ -78,8 +78,7 @@ function getRandomNumber(min, max){
 function checkSomma (sum){
     if (sum % 2 === 0){
         return 'pari'
-    }else{
-        return 'dispari'
     }
+    return 'dispari'
  
 }
